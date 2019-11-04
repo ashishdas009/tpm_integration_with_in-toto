@@ -1,0 +1,5 @@
+\section{System Overview}
+One of the key security goals of in-toto are artifact flow integrity and step authentication, which will be compromised if a functionary is compromised. The attacker on the specific functionary can arbitarily forge the link metadata that corresponds to that step, and violate the security goals. To protect the integrity of software supply chain from such an event, we would like to introduce the integration of TPM.
+
+\subsection{Trusted Platform Module}
+Trusted Platform Module (TPM) is an international standard for secure cryptoprocessor, a dedicated microcontroller designed to secure hardware through integrated cryptographic keys. Its standard was conceived by Trusted Computing Group, a computer industry consortium. The primary scope of TPM is to assure integrity of a platform. In this context, "integrity" means "behave as intended", and a "platform" is any computer device regardless of its operating system. It is to ensure that the boot process starts from a trusted combination of hardware and software, and continues until the operating system has fully booted and applications are running.
