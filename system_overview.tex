@@ -6,6 +6,6 @@ Trusted Platform Module (TPM) is an international standard for secure cryptoproc
 
 The TPM consists of several Platform Configuration Registers (PCRs) is to represent the platform software state, the history of the critical software (and configurations) that have run on the platform until the present. The TPM initializes all PCRs at power on, typically to either all zeroes or all ones, as specified by the TPM platform specification. The PCR value is changed through what the TPM calls an \textit{extend} operation. Cryptographically, it can be represented as follows:
 
-PCR new value = Digest of (PCR old value || data to extend)
+PCR new value $=$ Digest of (PCR old value || data to extend)
 
 In words, it takes the the old PCR value and concatenates some data to be extended. The TPM digests the result of the concatenation and stores the resulting digest as the new PCR value. TPM version 1.2 consisted of 16 such registers. But the new version, that is TPM 2.0 consists of 24 registers, giving higher flexibility to run software over it.
